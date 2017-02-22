@@ -327,6 +327,14 @@ NSString * const HarpyLanguageVietnamese            = @"vi";
             [self showAlertController:alertController];
 
         } break;
+            
+        case HarpyAlertTypeOnceSkip: {
+            UIAlertController *alertController = [self createAlertController];
+            [alertController addAction:[self skipAlertAction]];
+            [alertController addAction:[self updateAlertAction]];
+            
+            [self showAlertController:alertController];
+        } break;
 
         case HarpyAlertTypeNone: { //If the delegate is set, pass a localized update message. Otherwise, do nothing.
             if ([self.delegate respondsToSelector:@selector(harpyDidDetectNewVersionWithoutAlert:)]) {

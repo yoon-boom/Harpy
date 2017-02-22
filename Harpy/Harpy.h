@@ -68,6 +68,7 @@ typedef NS_ENUM(NSUInteger, HarpyAlertType)
     HarpyAlertTypeForce = 1,    // Forces user to update your app
     HarpyAlertTypeOption,       // (DEFAULT) Presents user with option to update app now or at next launch
     HarpyAlertTypeSkip,         // Presents User with option to update the app now, at next launch, or to skip this version all together
+    HarpyAlertTypeOnceSkip,     // Presents User with option to update the app now, skip this version
     HarpyAlertTypeNone          // Don't show the alert type , useful for skipping Patch, Minor, Major updates
 };
 
